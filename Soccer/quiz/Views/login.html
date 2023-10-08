@@ -46,13 +46,18 @@
                 <!-- ログインフォーム -->
                 <div class="sql_loginFrame">
                     <!-- タイトル -->
-                    <p class="sql_typo_loginFormTitle">職員ID・LCコードを入力してください</p>
+                    <p class="sql_typo_loginFormTitle">ログイン</p>
                     <!-- テキストフィールド -->
                     <div class="sql_textFieldArea">
-                        <label class="sql_textFieldLabel">
+                        <!-- <label class="sql_textFieldLabel">
                             <input type="text" maxlength="10" placeholder="職員ID（A・G6桁） or LCコード10桁を入力" autocomplete="username" id="sql_textFieldInput"
                                 class="sql_textFieldInput sql_typo_textFieldInput">
-                        </label>
+                        </label> -->
+
+                        <div class="sql_textField">
+                            <p class="sql_textField_label">職員(A123456)・LC(1234567890)</p>
+                            <input id="sql_textFieldInput" class="sql_textField_inputText" type="text" maxlength="10" placeholder="&nbsp;" autocomplete="username">
+                        </div>
                     </div>
                     <!-- ボタン -->
                     <div class="sql_loginBtnArea">

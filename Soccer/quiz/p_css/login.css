@@ -16,23 +16,24 @@ main {
 }
 
 .sql_loginFrame {
-    padding: 36px 24px;
+    padding: 24px;
     border-radius: 24px;
     background-color: #FFF9E5;
 }
 
 .sql_typo_loginFormTitle {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 26px;
     color: #2E2E2E;
+    text-align: center;
 }
 
 .sql_textFieldArea {
-    padding-top: 36px;
+    padding-top: 24px;
 }
 
-.sql_textFieldLabel {
+/* .sql_textFieldLabel {
     display: block;
     border: 1px solid #008673;
     border-radius: 16px;
@@ -63,6 +64,74 @@ main {
     font-size: 12px;
     line-height: 24px;
     color: #585858;
+} */
+
+.sql_textField {
+    position: relative;
+    width: 100%;
+    padding-top: 28px;
+}
+
+.sql_textField>input:not(:placeholder-shown) {
+    padding: 16px;
+    transition: all ease 0.3s;
+}
+
+.sql_textField>input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: all ease 0.3s;
+}
+
+.sql_textField>input:focus {
+    padding: 15px;
+    border: 1px solid #008673;
+    transition: all ease 0.3s;
+}
+
+.sql_textField_label {
+    position: absolute;
+    top: 44px;
+    left: 16px;
+    width: calc(100% - 16px * 2);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #585858;
+    pointer-events: none;
+    transition: all ease 0.3s;
+}
+
+.sql_textField:has(input:focus)>.sql_textField_label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2E2E2E;
+    transition: all ease 0.3s;
+}
+
+.sql_textField:has(input:not(:placeholder-shown))>.sql_textField_label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2E2E2E;
+    transition: all ease 0.3s;
+}
+
+.sql_textField_inputText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2E2E2E;
 }
 
 .sql_loginBtnArea {
