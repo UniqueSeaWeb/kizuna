@@ -1,0 +1,216 @@
+/* ログイン画面 */
+/* メイン */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sql_mainMask {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ログインフォームセクション */
+.sql_loginArea {
+    padding: 56px 20px 24px 20px;
+}
+
+.sql_loginFrame {
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #FFF9E5;
+}
+
+.sql_typo_loginFormTitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #2E2E2E;
+    text-align: center;
+}
+
+.sql_textFieldArea {
+    padding-top: 24px;
+}
+
+/* .sql_textFieldLabel {
+    display: block;
+    border: 1px solid #008673;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+}
+
+.sql_textFieldLabel:has(.sql_textFieldInput:disabled) {
+    border: 1px solid #D9D9D9;
+    background-color: #F0F0F0;
+}
+
+.sql_textFieldInput {
+    display: block;
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 16px;
+}
+
+.sql_typo_textFieldInput {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2E2E2E;
+    text-align: center;
+}
+
+.sql_typo_textFieldInput::placeholder {
+    font-size: 12px;
+    line-height: 24px;
+    color: #585858;
+} */
+
+.sql_textField {
+    position: relative;
+    width: 100%;
+    padding-top: 28px;
+}
+
+.sql_textField>input:not(:placeholder-shown) {
+    padding: 16px;
+    transition: all ease 0.3s;
+}
+
+.sql_textField>input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: all ease 0.3s;
+}
+
+.sql_textField>input:focus {
+    border: 1px solid #008673;
+    transition: all ease 0.3s;
+}
+
+.sql_textField_label {
+    position: absolute;
+    top: 44px;
+    left: 16px;
+    width: calc(100% - 16px * 2);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #585858;
+    pointer-events: none;
+    transition: all ease 0.3s;
+}
+
+.sql_textField:has(input:focus)>.sql_textField_label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2E2E2E;
+    transition: all ease 0.3s;
+}
+
+.sql_textField:has(input:not(:placeholder-shown))>.sql_textField_label {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2E2E2E;
+    transition: all ease 0.3s;
+}
+
+.sql_textField_inputText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+
+.sql_loginBtnArea {
+    padding-top: 36px;
+}
+
+.sql_loginBtn {
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 24px;
+    background-color: #FABF00;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.sql_typo_loginBtn {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #585858;
+}
+
+.sql_loginBtn_clicked {
+    transform: translateY(4px);
+    background-color: #F8AF00;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.sql_loginBtn_inactive {
+    background-color: #D5D5D5;
+}
+
+/* エラーメッセージ */
+.sql_errMessage {
+    padding: 8px;
+    border: 1px solid #EA3D3D;
+    border-radius: 16px;
+    background-color: #FFE0E0;
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+.sql_errMessageTitle {
+    display: flex;
+    align-items: center;
+}
+
+.sql_errMessageTitle>svg {
+    flex-shrink: 0;
+}
+
+.sql_errMessageTitleText {
+    flex-grow: 1;
+    padding-left: 8px;
+}
+
+.sql_typo_errMessageTitle {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #2E2E2E;
+}
+
+.sql_errVisible {
+    transform: translateY(24px);
+    opacity: 1;
+}
+
+.sql_errMessageContent {
+    padding: 8px 8px 0 8px;
+}
+
+.sql_typo_errMessage {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #585858;
+}
