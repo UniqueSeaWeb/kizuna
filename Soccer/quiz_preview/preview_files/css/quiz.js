@@ -153,6 +153,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
                                     // 選択肢をクリック可にする
                                     choiceArea.classList.remove('sqq_noClick');
+                                    
+                                    // プレビュー版仕様
+                                    if (quizNum == 2) {
+                                        userChoice.push(1);
+                                        userChoice.push(2);
+                                        userChoice.push(1);
+                                        userChoice.push(2);
+                                        userChoice.push(1);
+                                        userChoice.push(3);
+                                        userChoice.push(1);
+                                        userChoice.push(3);
+                                        quizNum = 10;
+                                    }
                                 }, 1500);
                             } else {
                                 // 解答日時の取得
@@ -166,7 +179,10 @@ window.addEventListener('DOMContentLoaded', function () {
                                         Point: point
                                     }).then(function () {
                                         // POST送信用のURLを定義
-                                        const postUrl = 'https://script.google.com/macros/s/AKfycbw4lKj3w8zccvqvyfwTfu-e1iGTfvh_vsIB3vn1TBA1cd-EKwBznXLgDLQoKCO2hoch/exec';
+                                        // const postUrl = 'https://script.google.com/macros/s/AKfycbw4lKj3w8zccvqvyfwTfu-e1iGTfvh_vsIB3vn1TBA1cd-EKwBznXLgDLQoKCO2hoch/exec';
+                                        // プレビュー版のウェブアプリURL
+                                        const postUrl = 'https://script.google.com/macros/s/AKfycbygMyULhqAugA5FrdbSXG2JwuxZ5map_2vntOAkCPAkSHFm4h8DFV8RnR_6782mzywjvg/exec';
+
 
                                         // 送信データ
                                         let SendDATA = {

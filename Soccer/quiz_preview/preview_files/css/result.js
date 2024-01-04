@@ -38,7 +38,9 @@ window.addEventListener('DOMContentLoaded', function () {
         // 正解数の格納
         point = record.Point;
         // ユーザーデータが格納されているGASのデプロイURLを設定
-        const deployUrl = 'https://script.google.com/macros/s/AKfycbw4lKj3w8zccvqvyfwTfu-e1iGTfvh_vsIB3vn1TBA1cd-EKwBznXLgDLQoKCO2hoch/exec';
+        // const deployUrl = 'https://script.google.com/macros/s/AKfycbw4lKj3w8zccvqvyfwTfu-e1iGTfvh_vsIB3vn1TBA1cd-EKwBznXLgDLQoKCO2hoch/exec';
+        // プレビュー版のウェブアプリURL
+        const deployUrl = 'https://script.google.com/macros/s/AKfycbygMyULhqAugA5FrdbSXG2JwuxZ5map_2vntOAkCPAkSHFm4h8DFV8RnR_6782mzywjvg/exec';
         // リクエストの送信
         fetch(deployUrl).then(function (response) {
             // レスポンスデータをJSON形式に変換
@@ -117,14 +119,6 @@ window.addEventListener('DOMContentLoaded', function () {
             }).then(function () {
                 // ローディング非表示
                 hideLoader();
-            }).then(function () {
-                // データベースの削除
-                db.delete().then(function () {
-                    console.log('データベースの削除成功');
-                }).catch(function (error) {
-                    console.log('データベースの削除失敗');
-                    console.log(error);
-                });
             });
         });
     });
